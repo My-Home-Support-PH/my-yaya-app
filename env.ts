@@ -3,8 +3,6 @@ import { z } from 'zod';
 
 export const env = createEnv({
   server: {
-    UPLOADTHING_SECRET: z.string().min(1),
-    UPLOADTHING_APP_ID: z.string().min(1),
     CONVEX_DEPLOYMENT: z.string().min(1),
     CLERK_SECRET_KEY: z.string().min(1),
   },
@@ -15,8 +13,6 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),
   },
   runtimeEnv: {
-    UPLOADTHING_SECRET: process.env.UPLOADTHING_SECRET,
-    UPLOADTHING_APP_ID: process.env.UPLOADTHING_APP_ID,
     CONVEX_DEPLOYMENT: process.env.CONVEX_DEPLOYMENT,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
