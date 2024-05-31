@@ -54,8 +54,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       convex:
-        specifier: ^1.12.0
-        version: 1.12.0(@clerk/clerk-react@5.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.12.1
+        version: 1.12.1(@clerk/clerk-react@5.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
@@ -1143,8 +1143,8 @@ packages:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  convex@1.12.0:
-    resolution: {integrity: sha512-N3WAkGEidECAsd7zkUG1tOIJSUZ9PShxiojkDk9Ha6V50A/iKR9D55LWh2zGKA37IgeUMbwvWx8NcDPO2YxaLA==}
+  convex@1.12.1:
+    resolution: {integrity: sha512-vZHVyyzlbXl/Vskq2GTADBzSHqFxC0THHCHHoNDBNdO/QKW50nyYwyCEmKoHjlnhuQGkfcvGYjz5uyKM0/sxVQ==}
     engines: {node: '>=16.15.1', npm: '>=7.0.0'}
     hasBin: true
     peerDependencies:
@@ -3556,7 +3556,7 @@ snapshots:
 
   consola@3.2.3: {}
 
-  convex@1.12.0(@clerk/clerk-react@5.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  convex@1.12.1(@clerk/clerk-react@5.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       esbuild: 0.17.19
       jwt-decode: 3.1.2
