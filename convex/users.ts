@@ -9,6 +9,7 @@ export const createUser = internalMutation({
   handler: async (ctx, args) => {
     await ctx.db.insert('users', {
       clerkId: args.clerkId,
+      isVerified: false,
     });
   },
 });
@@ -18,7 +19,7 @@ export const httpCreateUserWebhook = httpAction(async (ctx, request) => {
   const { data } = await request.json();
   const { id } = data;
 
-  const apiKey = await ctx.runQuery(internal.apiKeys.getApiKey, {
+  const apiKey = await ctx.runQuery(internal.apikeys.getApiKey, {
     apiKey: headers.get('X-API-Key') ?? '',
   });
 

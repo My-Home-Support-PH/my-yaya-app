@@ -4,7 +4,7 @@ import { httpCreateUserWebhook } from './users';
 const http = httpRouter();
 
 http.route({
-  path: '/create-user',
+  path: '/webhook/create-user',
   method: 'POST',
   handler: httpCreateUserWebhook,
 });

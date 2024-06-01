@@ -1,6 +1,6 @@
-import ConvexClientProvider from '@/components/convex/ConvexClientProvider';
+import ConvexClientProvider from '@/components/convex/convex-client-provider';
 import { cn } from '@/lib/utils';
-import { ClerkProvider, useAuth } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -29,9 +29,7 @@ export default function RootLayout({
         )}
       >
         <ClerkProvider>
-          <ConvexClientProvider useAuth={useAuth}>
-            {children}
-          </ConvexClientProvider>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
         </ClerkProvider>
       </body>
     </html>

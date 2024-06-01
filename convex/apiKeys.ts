@@ -8,6 +8,7 @@ export const getApiKey = internalQuery({
   handler: async (ctx, args) => {
     return await ctx.db
       .query('api_keys')
+      .withIndex('byApiKey')
       .filter((q) => q.eq(q.field('apiKey'), args.apiKey))
       .first();
   },
