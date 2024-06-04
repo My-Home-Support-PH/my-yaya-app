@@ -1,4 +1,4 @@
-import Comment from '@/components/verification/comment';
+import TestForm from '@/components/verification/form';
 import { SignOutButton } from '@clerk/nextjs';
 import { auth, currentUser } from '@clerk/nextjs/server';
 
@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <main>
-      <Comment />
+      <TestForm />
       <SignOutButton />
     </main>
   );

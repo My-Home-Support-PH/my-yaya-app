@@ -8,7 +8,7 @@ export const getComments = query({
       throw new Error('Not logged in');
     }
 
-    const convexUser = await ctx.db
+    const loggedInUser = await ctx.db
       .query('users')
       .withIndex('byClerkId')
       .filter((q) => q.eq(q.field('clerkId'), identity.subject))
@@ -17,7 +17,7 @@ export const getComments = query({
     const comments = await ctx.db
       .query('verification_comments')
       .withIndex('byForUserId')
-      .filter((q) => q.eq(q.field('forUserId'), convexUser?._id))
+      .filter((q) => q.eq(q.field('forUserId'), loggedInUser?._id))
       .order('asc')
       .collect();
 
